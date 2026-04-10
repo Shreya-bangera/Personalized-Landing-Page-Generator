@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Troopod AI PM - Demo</title>
+    <link rel="stylesheet" href="/public/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1>Personalized Landing Page Generator (Prototype)</h1>
+      <form id="genForm">
+        <label>Landing page URL
+          <input name="landingUrl" placeholder="https://example.com/offer" required />
+        </label>
+
+        <label>Ad creative URL (optional)
+          <input name="adUrl" placeholder="https://.../ad.jpg" />
+        </label>
+
+        <label>Or upload ad creative (image)
+          <input type="file" id="adFile" name="adFile" accept="image/*" />
+        </label>
+
+        <input type="hidden" name="dominantColor" id="dominantColor" />
+
+        <label>
+          Mashup mode: extract title/meta from landing page
+          <select name="mashup" id="mashup">
+            <option value="on">On</option>
+            <option value="off" selected>Off</option>
+          </select>
+        </label>
+
+        <label>Persona (optional)
+          <input name="persona" placeholder="e.g., 'Young urban professional'" />
+        </label>
+
+        <button type="submit">Generate Personalized Page</button>
+      </form>
+
+      <div id="result" style="margin-top:18px"></div>
+    </main>
+
+    <script src="/public/js/main.js"></script>
+  </body>
+</html>
