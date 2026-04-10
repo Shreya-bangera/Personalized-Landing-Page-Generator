@@ -78,16 +78,3 @@ Production considerations
 - Reliability: move uploads and generated pages to S3 or an equivalent object store and serve via CDN; monitor and alert on generation failures.
 - Cost control: cache repeated generations, add per-user quotas, and cap OpenAI requests per minute.
 
-Final status vs assignment
-------------------------------------------------
-- Meets the core assignment: users can input ad creatives (upload or link), enter a landing URL, and receive a generated personalized landing page.
-- Live demo: a client-only static demo is published via GitHub Pages to satisfy the "Live Demo / Link" requirement (no server needed for the demo). Server features (OpenAI generation, landing-page mashup, analytics) are implemented in `server.js` and need server hosting to run.
-
-Next steps I can take for you
-------------------------------------------------
-1. Deploy a persistent server demo on Fly/Render (no credit card required for Fly's free tier) and set `OPENAI_API_KEY` as an env var.
-2. Add content-safety filtering and a regeneration UI.
-3. Implement multi-variant generation + ranking.
-
-If you want any of those, tell me which and I'll implement it.
-
