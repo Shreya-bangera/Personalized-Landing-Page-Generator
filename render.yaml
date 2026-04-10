@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: troopod-ai-pm
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
